@@ -37,7 +37,7 @@ A Discord bot that automatically converts every image it receives into an NFT. T
 
 ### **NFT Collection**
 
-- **OpenSea Testnet Collection**: [Minter-33](https://testnets.opensea.io/collection/minter-33)
+- **OpenSea Testnet Collection**: [Minter](https://testnets.opensea.io/collection/minter-33)
 
 ---
 
@@ -96,7 +96,7 @@ Use `config.example.env` as a template for setting up your environment variables
 
    - The bot will save the image, pin it to IPFS, and mint it as an NFT.
 
-3. View the minted NFT on OpenSea Testnet under the [Minter-33 Collection](https://testnets.opensea.io/collection/minter-33).
+3. View the minted NFT on OpenSea Testnet under the [Minter Collection](https://testnets.opensea.io/collection/minter-33).
 
 ---
 
