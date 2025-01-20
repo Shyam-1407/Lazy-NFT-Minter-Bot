@@ -46,9 +46,8 @@ A Discord bot that automatically converts every image it receives into an NFT. T
 ### **Prerequisites**
 
 1. Python 3.8+
-2. Node.js (if working with smart contract locally)
-3. Discord Developer Account
-4. Pinata API Key
+2. Discord Developer Account
+3. Pinata API Key
 
 ### **Environment Variables**
 
@@ -61,8 +60,6 @@ WALLET_ADDRESS=your-ethereum-wallet-address
 WALLET_PRIVATE_KEY=your-ethereum-wallet-private-key
 BOT_TOKEN=your-discord-bot-token
 ```
-
-Use `config.example.env` as a template for setting up your environment variables.
 
 ### **Installation**
 
@@ -108,8 +105,8 @@ Lazy-NFT-Minter/
 ├── transaction.py         # Handles blockchain transactions
 ├── abi.txt                # Contract ABI for interactions
 ├── MINT_COUNTER_FILE.txt  # Tracks minting count
-├── name.txt               # Used for naming NFTs
-├── .env                   # Environment variables (excluded from Git)
+├── requirements.txt       # All the modules used in the project
+├── .env                   # Environment variables (excluded from the repository)
 ├── LazyMinter.sol         # Smart contract source code
 └── images/                # Directory to store uploaded images
 ```
