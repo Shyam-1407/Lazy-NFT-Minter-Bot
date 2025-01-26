@@ -26,8 +26,8 @@ intents.message_content = True
 
 client = discord.Client(intents=intents)
 
-pinata_api_key = 'a449087e51ae803cf3aa'
-pinata_api_secret = os.getenv("PINATA_SCT")
+pinata_api_key = os.getenv("PINATA_API_KEY")
+pinata_api_secret = os.getenv("PINATA_SECRET_KEY")
 
 pinata = Pinning(PINATA_API_KEY=pinata_api_key,
                  PINATA_API_SECRET=pinata_api_secret)
@@ -81,15 +81,15 @@ async def on_message(message):
           await message.channel.send("Your image is ready to be minted!")
           await message.channel.send("Be paitent. As this process will take 1-2 minutes.")
 
-          tx_receipt , tx_hash = Transaction(f"https://gateway.pinata.cloud/ipfs/{meta_cid}")
+          tx_hash = Transaction(f"https://gateway.pinata.cloud/ipfs/{meta_cid}")
 
           await message.channel.send("NFT minted successfully!")
 
           await message.channel.send(f"transaction link: https://sepolia.etherscan.io/tx/0x{tx_hash}")
-          await message.channel.send(f"nft link: https://testnets.opensea.io/assets/sepolia/0xb5bfee21bb057ddcf435707d7f99fe2185d952ad/{new_token -1}")
+          await message.channel.send(f"nft link: https://testnets.opensea.io/assets/sepolia/0xb5bfee21bb057ddcf435707d7f99fe2185d952ad/{new_token -2}")
 
         except Exception as e:
-          await message.channel.send(f"{e} \n If you face timeout problem visit this link below after few minutes \n https://testnets.opensea.io/assets/sepolia/0xb5bfee21bb057ddcf435707d7f99fe2185d952ad/{new_token -1}")
+          await message.channel.send(f"{e} \n If you face timeout problem visit this link below after few minutes \n https://testnets.opensea.io/assets/sepolia/0xb5bfee21bb057ddcf435707d7f99fe2185d952ad/{new_token -2}")
         break
 
 
