@@ -6,7 +6,8 @@ from transaction import Transaction
 global cid
 
 load_dotenv()
-os.chdir(r"C:\Users\LENOVO\OneDrive\Desktop\Lazy-Minter-1")
+# Update the file location to the location of project (to access images folder)
+os.chdir(r"/path/to/project")
 
 def get_mint_number():
     if os.path.exists("MINT_COUNTER_FILE.txt"):
@@ -92,5 +93,4 @@ async def on_message(message):
         break
 
 
-client.run(
-    'MTMyNDY4MjgwNjcxODEwNzcyMQ.GFvZSH.p7NCxPD7_nzj2mCxVT7jmR4nxnsC7ip2JF2NvM')
+client.run(os.getenv("BOT_TOKEN"))
