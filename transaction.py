@@ -19,8 +19,8 @@ def Transaction(metadata):
     contract = w3.eth.contract(address=contract_address, abi=contract_abi)
     
     # minting adress details
-    minter_address = "0xaBBAb4F74b85749b51599D65C2B8468B47870f53"
-    private_key = os.getenv("PVT")
+    minter_address = os.getenv("WALLET_ADDRESS")
+    private_key = os.getenv("WALLET_PRIVATE_KEY")
 
     metadata_uri = metadata
 
@@ -48,6 +48,5 @@ def Transaction(metadata):
     #signing the transaction and getting the receipt
     signed_txn = w3.eth.account.sign_transaction(transaction_data, private_key)
     tx_hash = w3.eth.send_raw_transaction(signed_txn.raw_transaction)
-    tx_receipt = w3.eth.wait_for_transaction_receipt(tx_hash)
 
-    return tx_receipt, tx_hash.hex()
+    return tx_hash.hex()
